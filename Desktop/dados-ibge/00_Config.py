@@ -13,7 +13,6 @@ for nb in notebooks:
     try:
         print(f"Iniciando: {nb['name']}...")
         
-        # O timeout de 3600 segundos (1 hora) é opcional
         status = dbutils.notebook.run(nb['path'], timeout_seconds=300)
         
         print(f"Sucesso: {nb['name']} finalizado com status: {status}")
